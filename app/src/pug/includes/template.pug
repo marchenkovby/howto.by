@@ -1,0 +1,50 @@
+include mixins.pug
+block config
+include config.pug
+
+// build:remove
+doctype html
+html
+  head(lang='ru')
+    meta(charset='utf-8')
+    title= articleTitle
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    link(rel='stylesheet' href='/styles/styles.css?v=0.0.77')
+  body
+    .page
+      .page__inner
+        //- Main-header
+        header.main-header.page__main-header
+          .logo
+            a.logo__link.logo__link--development(href='/') howto.by
+            
+        //- Breadcrumbs
+        nav.breadcrumbs.page__breadcrumbs
+          ul.breadcrumbs__list
+            li.breadcrumbs__item
+              a.breadcrumbs__link(href='/') Главная
+            li.breadcrumbs__item= articleTitle  
+        
+        //- Main-content
+        main.main-content.page__main-content 
+          // endbuild
+          block content
+          // build:remove
+          //- Comments
+          .comments.main-content__comments
+            p.comments__paragraph У вас есть вопрос? Заметили ошибку? Пишите в телеграм 
+              a.comments__link(href='https://t.me/howtoby' target='_blank') t.me/howtoby
+              | .
+            
+        //- Main-footer
+        footer.main-footer.page__main-footer
+          p.main-footer__paragraph (c) 
+            a.main-footer__link(href='https://marchenkov.by' target='_blank') Максим Марченков
+            |  2019-2021
+// endbuild
+| <?php
+| return [
+|  'title' => '#{articleTitle}',
+|  'desk'  => '#{articleDesk}',
+|  'og_image'  => '#{site}#{articleImgPath}#{articleImgDefaultName}'
+| ];

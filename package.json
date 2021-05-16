@@ -1,0 +1,32 @@
+{
+  "name": "test.test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marchenkovby/test.test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marchenkovby/test.test/issues"
+  },
+  "homepage": "https://github.com/marchenkovby/test.test#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.14",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-csscomb": "^3.1.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-html-replace": "^1.6.2",
+    "gulp-remove-empty-lines": "^0.1.0"
+  },
+  "dependencies": {}
+}

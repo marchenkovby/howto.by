@@ -1,0 +1,38 @@
+extends includes/template.pug
+
+append config
+  - var articleTitle = 'Часто задаваемые вопросы по настройке модемов'
+  - var articleDesk = 'На данной странице представлен список часто задаваемых вопросов по настройке модемов.'
+  //- Folrder for images
+  - var articleName = '49'
+  //- Image for OpenGraph
+  - var articleImgDefaultName = '01.png'
+
+append content
+  article.article.main-content__article
+    header.article__header
+      h1.artilce__heading.article__heading--level-1= articleTitle
+      figure.article__figure
+        img.article__image(src=articleImgPath + articleImgDefaultName alt='Часто задаваемые вопросы по настройке модемов')
+      p.article__desk= articleDesk  
+    .article__content
+      ol.article__faq-list
+        li.article__faq-item
+          h3.article__heading.article__heading--level-3.article__heading--faq Как выгдядит оптическая розетка?
+          figure.article__figure
+            img.article__image(src=articleImgPath + '02.jpg' alt='Оптическая розетка')
+        li.article__faq-item
+          h3.article__heading.article__heading--level-3.article__heading--faq Как посмотреть пароль для Wi-Fi в веб-интерфейсе на GPON-модеме Huawei EchoLife HG8245H-256M, HG8245HV5, HG8245H5, HG8245A?
+          figure.article__figure
+            img.article__image(src=articleImgPath + '03.png' alt='Часть страницы входа в настройки GPON-модема Huawei EchoLife HG8245H-256M, HG8245HV5, HG8245H5, HG8245A')
+            p.article__paragraph Установите соединение с модемом через кабельное или беспроводное соединение. В адресной строке браузера введите ip-адрес GPON-модема: #[strong.article__strong #[a.article__link(href='http://192.168.100.1' target='_blank') 192.168.100.1]]. Используйте имя пользователя: #[strong.article__strong root], пароль: #[strong.article__strong admin].
+        li.article__faq-item
+          h3.article__heading.article__heading--level-3.article__heading--faq На GPON-модеме индикатор LOS мигает красным. Что делать?
+          p.article__paragraph Проверьте следующее:
+          ol.article__list.article__list--ol
+            li.article__list-item Убедитесь, что оптический кабель подключен правильно (до щелчка) и коннектор чистый.
+            li.article__list-item Если у вас есть возможность, то подключите другим оптический кабелем.
+            li.article__list-item Если ничего не помогает, то обратитесь в техническую службу 123.
+        li.article__faq-item
+          h3.article__heading.article__heading--level-3.article__heading--faq Сколько электроэнергии потребляет модем?
+          p.article__paragraph В паспорте от модема его потребляемая мощность составляет 12 Вт. В месяц примерно получится 9,5 кВт. Но здесь необходимо учитывать режим работы модема. Больше 9,5 кВт в месяц реальная потребляемая мощность не будет, она будет скорей всего где-то 4-5 кВт.
