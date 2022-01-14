@@ -1,22 +1,35 @@
 {
- 	template: {
-		"prefix": "template",
-		"scope": "pug",
-		"body": [
-      "extends includes/template.pug"
-		]
-	},
-  
-	config: {
-		"prefix": "config",
-		"scope": "pug",
-		"body": [
-      "append config",
-        "\t- var articleTitle = 'Биты и байты'",
-        "\t- var articleDesk = 'В данной статье представлена таблица с часто используемыми значениями битов и байтов.'",
-        "\t- var articleName = '45'",
-        "\t//- Image for OpenGraph",
-        "\t- var articleImgDefaultName = '01.png'"
-		]
-	}
+	// Place your snippets for jade here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	   "article": {
+		   "prefix": "article",
+		   "body": [
+				"extends includes/template.pug",
+		 		"\nappend config",
+					"\t- var articleTitle = '${1:label}'",
+					"\t- var articleDesk = '$2'",
+					"\t- var articleUrl = '$3'",
+					"\t- var articleImgDefaultName = articleUrl + '01.${4:jpg}'",
+					"\nappend content",
+					"article.article.main-content__article",
+						"\theader.article__header",
+							"\th1.article__heading.article__heading--level-1= articleTitle",
+							"\tfigure.article__figure",
+							"\timg.article__image(src=articleImgPath + articleImgDefaultName alt='Проверка скорости интернета на ноутбуке')",
+						"\tp.article__desk= articleDesk",
+					"\t.article__content"
+		   ]
+   }
+
 }
