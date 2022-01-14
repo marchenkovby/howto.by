@@ -1,0 +1,16 @@
+{
+ 	template: {
+		"prefix": "template",
+		"scope": "pug",
+		"body": [
+      "extends includes/template.pug"
+		]
+	},
+  
+	config: {
+		"prefix": "config",
+		"scope": "pug",
+		"body": [
+		]
+	}
+}
