@@ -3,16 +3,11 @@
   "version": "1.0.0",
   "description": "Knowledge base for configuring network hardware",
   "author": "Maksim Marchenkov",
+  "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/marchenkovby/test.test.git"
+    "url": "https://github.com/marchenkovby/howto.by"
   },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/marchenkovby/test.test/issues"
-  },
-  "homepage": "https://github.com/marchenkovby/test.test#readme",
   "devDependencies": {
     "browser-sync": "^2.26.14",
     "del": "^6.0.0",
@@ -24,6 +19,5 @@
     "gulp-sass": "^4.1.0",
     "gulp-html-replace": "^1.6.2",
     "gulp-remove-empty-lines": "^0.1.0"
-  },
-  "dependencies": {}
+  }
 }
