@@ -11,6 +11,12 @@
 		"prefix": "config",
 		"scope": "pug",
 		"body": [
+      "append config",
+        "\t- var articleTitle = 'Биты и байты'",
+        "\t- var articleDesk = 'В данной статье представлена таблица с часто используемыми значениями битов и байтов.'",
+        "\t- var articleName = '45'",
+        "\t//- Image for OpenGraph",
+        "\t- var articleImgDefaultName = '01.png'"
 		]
 	}
 }
