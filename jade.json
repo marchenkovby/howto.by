@@ -67,6 +67,13 @@
         "\tli.article__list-item",
     ]
   },
+  
+  "list-item": {
+    "prefix": "list-tem",
+    "body": [
+        "\li.article__list-item",
+    ]
+  },
 
   "steps": {
     "prefix": "steps",
