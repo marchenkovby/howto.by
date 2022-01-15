@@ -91,8 +91,8 @@
     ]
   },
 
-  "h2-step": {
-    "prefix": "h2-steps",
+  "h2--step": {
+    "prefix": "h2--steps",
     "body": [
       "h2.article__heading.article__heading--level-2.article__heading--step",
     ]
