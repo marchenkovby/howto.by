@@ -71,7 +71,7 @@
   "list-item": {
     "prefix": "list-tem",
     "body": [
-        "\li.article__list-item",
+      "li.article__list-item",
     ]
   },
 
