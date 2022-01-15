@@ -166,5 +166,19 @@
     "body": [
       "h3.artilce__heading.article__heading--level-6"
     ]
+  },
+
+  "table": {
+    "prefix": "table",
+    "body": [
+      ".article__table-responsive",
+        "\ttable.article__table",
+          "\t\tthead.article__table-head",
+            "\t\t\ttr.article__table-row",
+              "\t\t\t\tth.article__table-cell.article__table-cell--heading",
+          "\t\ttbody.article__table-body",
+            "\t\t\ttr.article__table-row",
+              "\t\t\t\ttd.article__table-cell"
+    ]
   }
 }
