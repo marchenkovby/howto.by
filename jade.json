@@ -180,5 +180,40 @@
             "\t\t\ttr.article__table-row",
               "\t\t\t\ttd.article__table-cell"
     ]
+  },
+  
+  "table-head": {
+    "prefix": "table-head",
+    "body": [
+      "thead.article__table-head"
+    ]
+  },
+  
+  "table-body": {
+    "prefix": "table-body",
+    "body": [
+      "tbody.article__table-body"
+    ]
+  },
+ 
+  "table-row": {
+    "prefix": "table-row",
+    "body": [
+      "tr.article__table-row"
+    ]
+  },
+
+  "table-cell": {
+    "prefix": "table-cell",
+    "body": [
+      "td.article__table-cell"
+    ]
+  },
+
+  "table-cell--heading": {
+    "prefix": "table-cell--heading",
+    "body": [
+      "th.article__table-cell.article__table-cell--heading",
+    ]
   }
 }
