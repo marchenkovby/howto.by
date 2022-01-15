@@ -15,8 +15,7 @@
           "\t\t\tfigure.article__figure",
             "\t\t\t\timg.article__image(src=articleImgPath + articleImgDefaultName alt='$5')",
           "\t\t\tp.article__desk= articleDesk",
-        "\t\t.article__content",
-          "\t\t\t$0"
+        "\t\t.article__content"
     ]
   },
 
@@ -39,6 +38,126 @@
     "prefix": "paragraph",
     "body": [
       "p.article__paragraph"
+    ]
+  },
+
+  "note": {
+    "prefix": "note",
+    "body": [
+      "blockquote.article__note",
+      "\tp.article__paragraph #[strong.article__strong Примечание.]"
+    ]
+  },
+
+  "note-list": {
+    "prefix": "note-list",
+    "body": [
+      "blockquote.article__note",
+        "\tp.article__paragraph",
+          "\t\tstrong.article__strong Примечание.",
+        "\tul.article__list",
+          "\t\tli.article__list-item"
+    ]
+  },
+
+  "list": {
+    "prefix": "list",
+    "body": [
+      "ul.article__list",
+        "\tli.article__list-item",
+    ]
+  },
+
+  "steps": {
+    "prefix": "steps",
+    "body": [
+      "ol.article__steps",
+        "\tli.article__steps-item",
+        "\t\th2.article__heading.article__heading--level-2.article__heading--step"
+    ]
+  },
+
+  "steps-item": {
+    "prefix": "steps-item",
+    "body": [
+      "li.article__steps-item",
+    ]
+  },
+
+  "h2-step": {
+    "prefix": "h2-steps",
+    "body": [
+      "h2.article__heading.article__heading--level-2.article__heading--step",
+    ]
+  },
+
+  "list-item": {
+    "prefix": "list-item",
+    "body": [
+      "li.article__list-item"
+    ]
+  },
+
+  "link": {
+    "prefix": "link",
+    "body": [
+      "#[a.article__link(href='${1:#}') $2]"
+    ]
+  },
+
+  "link-target": {
+    "prefix": "link-target",
+    "body": [
+      "#[a.article__link(href='${1:#}' target='_blank') $2]"
+    ]
+  },
+
+  "strong": {
+    "prefix": "strong",
+    "body": [
+      "#[strong.article__strong $1]"
+    ]
+  },
+
+  "h1": {
+    "prefix": "h1",
+    "body": [
+      "h1.artilce__heading.article__heading--level-1"
+    ]
+  },
+
+  "h2": {
+    "prefix": "h2",
+    "body": [
+      "h2.artilce__heading.article__heading--level-2"
+    ]
+  },
+
+  "h3": {
+    "prefix": "h3",
+    "body": [
+      "h3.artilce__heading.article__heading--level-3"
+    ]
+  },
+
+  "h4": {
+    "prefix": "h4",
+    "body": [
+      "h3.artilce__heading.article__heading--level-4"
+    ]
+  },
+
+  "h5": {
+    "prefix": "h5",
+    "body": [
+      "h3.artilce__heading.article__heading--level-5"
+    ]
+  },
+
+  "h6": {
+    "prefix": "h6",
+    "body": [
+      "h3.artilce__heading.article__heading--level-6"
     ]
   }
 }
