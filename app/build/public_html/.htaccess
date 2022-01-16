@@ -7,6 +7,12 @@
 # Enable rediraction
 RewriteEngine On
 
+# Rewrite images by template:
+# from /images/48/1.jpg to /images/4801.jpg
+# from /images/49/12.png to /images/4912.png
+RewriteRule ^images/(\d+)/image(\d)\.(png|jpg)$ /images/$10$2.$3 [R=301,L]
+RewriteRule ^images/(\d+)/image(\d{2,})\.(png|jpg)$ /images/$1$2.$3 [R=301,L]
+
 # Rewrite HTTP to HTTPS
 # RewriteCond %{HTTPS} !=on
 # RewriteRule ^(.*) https://%{SERVER_NAME}/$1 [R=301,L]
