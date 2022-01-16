@@ -52,11 +52,13 @@ function clean() {
 
 function browsersee() {
 	browsersync.init({
-    proxy: 'https://howto.test',
-    https: {
+    proxy: 'http://howto.by.test',
+    host: 'howto.by.test',
+    open: 'external'
+    /*https: {
      key: "C:/OpenServer/userdata/config/cert_files/localhost/localhost-server.key",
      cert: "C:/OpenServer/userdata/config/cert_files/localhost/localhost-server.crt"
-    }
+    }*/
 	})
 }
 
