@@ -1,7 +1,7 @@
 # Password for folder
 # AuthType Basic
-# AuthName "Protected 'test.howto.by'"
-# AuthUserFile "/home/mysuperd/.htpasswds/test.howto.by/public_html/passwd"
+# AuthName "Protected 'howto.by (test)'"
+# AuthUserFile "/home/mysuperd/.htpasswds/DOMAIN/public_html/passwd"
 # Require valid-user
 
 # Enable rediraction
