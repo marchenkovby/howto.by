@@ -1,19 +1,19 @@
 # Password for folder
-AuthType Basic
-AuthName "Protected 'test.howto.by'"
-AuthUserFile "/home/mysuperd/.htpasswds/test.howto.by/public_html/passwd"
-Require valid-user
+# AuthType Basic
+# AuthName "Protected 'test.howto.by'"
+# AuthUserFile "/home/mysuperd/.htpasswds/test.howto.by/public_html/passwd"
+# Require valid-user
 
 # Enable rediraction
 RewriteEngine On
 
 # Rewrite HTTP to HTTPS
-RewriteCond %{HTTPS} !=on
-RewriteRule ^(.*) https://%{SERVER_NAME}/$1 [R=301,L]
+# RewriteCond %{HTTPS} !=on
+# RewriteRule ^(.*) https://%{SERVER_NAME}/$1 [R=301,L]
 
 # Rewrite WWW to NO WWW
-RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
-RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+# RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+# RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
 
 # Rewrite index.php to /
 RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.php
