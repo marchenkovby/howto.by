@@ -92,8 +92,8 @@
     ]
   },
 
-  "steps-item1": {
-    "prefix": "steps-item1",
+  "steps-item": {
+    "prefix": "steps-item",
     "body": [
       "li.article__steps-item",
       "\th2.article__heading.article__heading--level-2.article__heading--step"
