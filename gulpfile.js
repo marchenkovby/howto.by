@@ -12,7 +12,8 @@ const htmlremovelines = require('gulp-remove-empty-lines');
 function pugcompile() {
   return src([
     'app/src/pug/**/*.pug',
-    '!app/src/pug/includes/**/*.pug'
+    '!app/src/pug/includes/**/*.pug',
+    '!app/src/pug/templates/**/*.pug'
   ])
   .pipe(pug({
     doctype: 'html',
@@ -62,10 +63,10 @@ function browsersee() {
 	})
 }
 
-function images() {
-	return src('app/src/images/**/*') // Берём все изображения из папки источника
-	.pipe(dest('app/build/public_html/images/')) // Выгружаем оптимизированные изображения в папку назначения
-}
+//function images() {
+//	return src('app/src/images/**/*') // Берём все изображения из папки источника
+//	.pipe(dest('app/build/public_html/images/')) // Выгружаем оптимизированные изображения в папку назначения
+//}
 
 exports.clean = clean;
-exports.default = parallel(pugcompile, styles, images, startwatch, browsersee);
+exports.default = parallel(pugcompile, styles, startwatch, browsersee);
