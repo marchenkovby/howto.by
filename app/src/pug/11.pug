@@ -1,0 +1,31 @@
+extends templates/post.pug
+
+append config
+  - var articleTitle = 'Как настроить охрана на GPON-модеме Huawei EchoLife HG8245HV5'
+  - var articleDesk = 'В статье я вам расскажу о том, как настроить охрану на GPON-модеме Huawei EchoLife HG8245HV5'
+  - var articleUrl = '11'
+  - var articleImgDefaultName = '01.jpg'
+
+append content
+  article.article.main-content__article
+    header.article__header
+      h1.article__heading.article__heading--level-1= articleTitle
+      figure.article__figure
+        img.article__image(src=articleImgPath + articleImgDefaultName alt='Внешний вид GPON-модема Huawei EchoLife HG8245HV5')
+      p.article__desk= articleDesk
+    .article__content
+      p.article__paragraph Итак, необходимо выполнить следующие действия:
+      ol.article__steps
+        li.article__steps-item
+          h2.article__heading.article__heading--level-2.article__heading--step Соедините модем с вашим компьютером
+          p.article__paragraph Для подключения через проводное соединение используйте сетевой кабель, соединив им порт 1 на GPON-модеме и порт на сетевой карте вашего компьютера.
+          figure.article__figure
+            img.article__image(src=articleImgPath + '02.jpg' alt='Проводное соединение через сетевой кабель GPON-модема Huawei EchoLife HG8245HV5 и ноутбука')
+          p.article__paragraph Для подключения через беспроводное соединение вы должны быть подключены к сети Wi-Fi вашего GPON-модема.
+        li.article__steps-item
+          h2.article__heading.article__heading--level-2.article__heading--step Зайдите в настройки модема
+          ol.article__steps
+            li.article__steps-item Откройте любой браузер. В адресной строке перейдите по ip-адресу #[a.article__link(href='http://192.168.100.1' target='_blank') #[strong.article__strong 192.168.100.1]].
+            li.article__steps-item Откроется окно авторизации. Введите логин #[strong.article__strong telecomadmin], пароль #[strong.article__strong admintelecom] и нажмите на кнопку #[strong.article__strong Login].
+          figure.article__figure
+            img.article__image(src=articleImgPath + '03.png' alt='Вход в настройки GPON-модема Huawei EchoLife HG8245HV5')

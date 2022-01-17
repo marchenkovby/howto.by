@@ -1,4 +1,4 @@
-extends includes/template-index.pug
+extends templates/index.pug
 
 append config
   - var articleTitle = 'База знаний по настройке сетевого оборудования'

@@ -1,6 +1,5 @@
-include mixins.pug
 block config
-include config.pug
+include ../includes/config.pug
 
 // build:remove
 doctype html
@@ -46,5 +45,7 @@ html
 | return [
 |  'title' => '#{articleTitle}',
 |  'desk'  => '#{articleDesk}',
-|  'og_image'  => '#{site}#{articleImgPath}#{articleImgDefaultName}'
+|  'og_image'  => '#{site}/icons/android-chrome-256x256.png',
+|  'breadcrumbs' => false,
+|  'comments' => false
 | ];
