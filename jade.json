@@ -7,13 +7,13 @@
         "\t- var articleTitle = '$1'",
         "\t- var articleDesk = '$2'",
         "\t- var articleUrl = '$3'",
-        "\t- var articleImgDefaultName = articleUrl + '01.${4:jpg}'",
+        "\t- var articleImgDefaultName = '01.${4:jpg}'",
       "\nappend content",
       "\tarticle.article.main-content__article",
         "\t\theader.article__header",
           "\t\t\th1.article__heading.article__heading--level-1= articleTitle",
           "\t\t\tfigure.article__figure",
-            "\t\t\t\timg.article__image(src=articleImgDefaultName alt='$5')",
+            "\t\t\t\timg.article__image(src=articleImgPath + articleImgDefaultName alt='$5')",
           "\t\t\tp.article__desk= articleDesk",
         "\t\t.article__content"
     ]
@@ -23,7 +23,7 @@
     "prefix": "image",
     "body": [
       "figure.article__figure",
-      "\timg.article__image(src=articleImgPath '${1:00}.${2:png}' alt='$3')"
+      "\timg.article__image(src=articleImgPath + '${1:00}.${2:png}' alt='$3')"
     ]
   },
 
@@ -84,11 +84,26 @@
     ]
   },
 
-  "steps-item": {
-    "prefix": "steps-item",
+  "steps2": {
+    "prefix": "steps2",
+    "body": [
+      "ol.article__steps",
+        "\tli.article__steps-item"
+    ]
+  },
+
+  "steps-item1": {
+    "prefix": "steps-item1",
     "body": [
       "li.article__steps-item",
       "\th2.article__heading.article__heading--level-2.article__heading--step"
+    ]
+  },
+
+  "steps-item2": {
+    "prefix": "steps-item2",
+    "body": [
+      "li.article__steps-item"
     ]
   },
 
