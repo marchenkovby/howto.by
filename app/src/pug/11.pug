@@ -17,15 +17,44 @@ append content
       p.article__paragraph Итак, необходимо выполнить следующие действия:
       ol.article__steps
         li.article__steps-item
-          h2.article__heading.article__heading--level-2.article__heading--step Соедините модем с вашим компьютером
+          h2.article__heading.article__heading--level-2.article__heading--step Соедините GPON-модем с вашим компьютером
           p.article__paragraph Для подключения через проводное соединение используйте сетевой кабель, соединив им порт 1 на GPON-модеме и порт на сетевой карте вашего компьютера.
           figure.article__figure
             img.article__image(src=articleImgPath + '02.jpg' alt='Проводное соединение через сетевой кабель GPON-модема Huawei EchoLife HG8245HV5 и ноутбука')
           p.article__paragraph Для подключения через беспроводное соединение вы должны быть подключены к сети Wi-Fi вашего GPON-модема.
         li.article__steps-item
-          h2.article__heading.article__heading--level-2.article__heading--step Зайдите в настройки модема
+          h2.article__heading.article__heading--level-2.article__heading--step Зайдите в настройки GPON-модема
           ol.article__steps
             li.article__steps-item Откройте любой браузер. В адресной строке перейдите по ip-адресу #[a.article__link(href='http://192.168.100.1' target='_blank') #[strong.article__strong 192.168.100.1]].
             li.article__steps-item Откроется окно авторизации. Введите логин #[strong.article__strong telecomadmin], пароль #[strong.article__strong admintelecom] и нажмите на кнопку #[strong.article__strong Login].
           figure.article__figure
             img.article__image(src=articleImgPath + '03.png' alt='Вход в настройки GPON-модема Huawei EchoLife HG8245HV5')
+        li.article__steps-item 
+          h2.article__heading.article__heading--level-2.article__heading--step Перейдите во вкладку WAN
+          p.article__paragraph После авторизации откроется главное меню GPON-модема. Вам необходимо перейти во вкладку #[strong.article__strong WAN].
+          figure.article__figure
+            img.article__image(src=articleImgPath + '04.png' alt='Вкладка Status на GPON-модеме Huawei EchoLife HG8245HV5')
+        li.article__steps-item 
+          h2.article__heading.article__heading--level-2.article__heading--step Выберите подключение для интернета
+          p.article__paragraph Во вкладке #[strong.article__strong WAN] выберите поле #[strong.article__strong 4_INTERNET_R_VID_10].
+          figure.article__figure
+            img.article__image(src=articleImgPath + '05.png' alt='Вкладка WAN на GPON-модеме Huawei EchoLife HG8245HV5')
+        li.article__steps-item 
+          h2.article__heading.article__heading--level-2.article__heading--step Выберите нужный порт
+          ol.article__steps
+            li.article__steps-item В поле #[strong.article__strong Binding Options] уберите галочки с порта, на котором будете настраивать охрану.
+            li.article__steps-item Нажмите #[strong.article__strong Apply] для сохранения настроек.
+          figure.article__figure
+            img.article__image(src=articleImgPath + '06.png' alt='Вкладка WAN на GPON-модеме Huawei EchoLife HG8245HV5')
+        li.article__steps-item 
+          h2.article__heading.article__heading--level-2.article__heading--step Создайте новое подключение для охраны
+          ol.article__steps
+            li.article__steps-item Нажмите на кнопку #[strong.article__strong New].
+            li.article__steps-item В поле #[strong.article__strong WAN Mode] выберите #[strong.article__strong Bridge WAN].
+            li.article__steps-item В поле #[strong.article__strong Service Type] выберите #[strong.article__strong OTHER].
+            li.article__steps-item В поле #[strong.article__strong VLAN ID] введите #[strong.article__strong 60].
+            li.article__steps-item В поле #[strong.article__strong 802.1p] выберите #[strong.article__strong 5].
+            li.article__steps-item В поле  #[strong.article__strong Binding Options] отмечаем порт, через которые будет работать оборудование для охраны.
+            li.article__steps-item Нажмите #[strong.article__strong Apply] для сохранения настроек.
+          figure.article__figure
+            img.article__image(src=articleImgPath + '07.png' alt='Создание нового подключения на GPON-модеме Huawei EchoLife HG8245HV5')
