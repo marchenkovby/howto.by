@@ -1,10 +1,10 @@
-          <p class="main-content__intro">База знаний содержит статьи, руководства и FAQ по настройке модемов, роутеров, приставок и другого сетевого оборудования для провайдера Белтелеком.</p>
+          <p class="main-content__intro">Сайт содержит статьи, руководства и FAQ по настройке модемов, роутеров, приставок и другого сетевого оборудования для провайдера Белтелеком.</p>
           <article class="article main-content__article">
             <h1 class="article__heading article__heading--level-1">Список статей, руководств и FAQ</h1>
             <section class="article__category">
               <h2 class="article__heading article__heading--level-2 article__heading--index-page">Общее</h2>
               <ul class="article__list article__list--index-page">
-                <li class="article__list-item"><a class="article__link" href="/48">Как проверить скорость интернета</a></li>
+                <li class="article__list-item"><a class="article__link do" href="/48">Как проверить скорость интернета</a></li>
                 <li class="article-list__item"><a class="article__link article__link--updated" href="/10">Адреса DNS-серверов</a></li>
                 <li class="article__list-item"><a class="article__link article__link" href="/45">Биты и байты</a></li>
               </ul>
@@ -45,7 +45,7 @@
                 <li class="article__list-item"><a class="article__link" href="/7">Как настроить режим Bridge на модеме Huawei EchoLife HG8245HV5</a></li>
                 <li class="article__list-item"><a class="article__link" href="/8">Веб-интерфейс модема Huawei EchoLife HG8245HV5</a></li>
                 <li class="article__list-item"><a class="article__link" href="/9">Как выбрать канал для Wi-Fi в настройках модема Huawei EchoLife HG8245HV5</a></li>
-                <li class="article__list-item"><a class="article__link" href="/11">Как настроить охрану на модеме Huawei EchoLife HG8245HV5</a></li>
+                <li class="article__list-item"><a class="article__link do" href="/11">Как настроить охрану на GPON-модеме Huawei EchoLife HG8245HV5</a></li>
                 <li class="article__list-item"><a class="article__link" href="/12">Как настроить режим Bridge для VPN на модеме Huawei EchoLife HG8245HV5</a></li>
                 <li class="article__list-item"><a class="article__link" href="/13">Как настроить режим Router для VPN на модеме Huawei EchoLife HG8245HV5</a></li>
                 <li class="article__list-item"><a class="article__link" href="/15">Как настроить автоматическое выключение Wi-Fi по расписанию на модеме Huawei EchoLife HG8245HV5</a></li>

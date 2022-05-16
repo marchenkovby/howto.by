@@ -1,0 +1,38 @@
+block config
+include ../includes/config.pug
+
+// build:remove
+doctype html
+html
+  head(lang='ru')
+    meta(charset='utf-8')
+    title!= "<?php isset($title) and print($title) ?>"
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    link(rel='stylesheet' href='/styles/styles.css?v=0.0.77')
+  body
+    .page
+      .page__inner
+        //- Main-header
+        include ../modules/main-header.pug
+            
+        //- Breadcrumbs
+        include ../modules/breadcrumbs.pug
+        
+        //- Main-content
+        main.main-content.page__main-content 
+          // endbuild
+          block content
+          // build:remove
+          
+          //- Comments
+          include ../modules/comments.pug
+            
+        //- Main-footer
+        include ../modules/main-footer.pug
+// endbuild
+| <?php
+| return [
+|  'title' => '#{articleTitle}',
+|  'desk'  => '#{articleDesk}',
+|  'og_image'  => '#{site}#{articleImgPath}#{articleImgDefaultName}'
+| ];

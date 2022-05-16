@@ -401,3 +401,7 @@
 .main-footer__link:active {
   color: #0073ff;
 }
+
+.do {
+  background-color: yellow;
+}
