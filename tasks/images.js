@@ -8,8 +8,10 @@ module.exports = function images() {
   .pipe(dest('app/build/public_html/images/**/*'))
 }
 
+
 // Попробовать убрать module.exports, а также const { src, dest } = require('gulp')
 //
+// gulp-newer - https://github.com/alstupakov/airStart
 // npm install gulp-imagemin --save-dev
 // npm install gulp-cache --save-dev
 // https://webref.ru/dev/gulp-for-beginners/optimizing-images
