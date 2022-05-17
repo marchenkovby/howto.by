@@ -1,6 +1,6 @@
 const { parallel, series } = require('gulp');
 const requireDir = require('require-dir');
-const tasks = requireDir('./tasks');
+const tasks = requireDir('./gulp/tasks');
 
 exports.bs = tasks.bs;
 exports.clean = tasks.clean;
