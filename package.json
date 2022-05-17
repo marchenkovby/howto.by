@@ -2,7 +2,7 @@
   "name": "howto.by",
   "description": "Knowledge base for configuring network hardware",
   "author": "Maksim Marchenkov",
-  "license": "MIT",
+  "license": "ISC",
   "repository": {
     "type": "git",
     "url": "https://github.com/marchenkovby/howto.by"
