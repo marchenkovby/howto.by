@@ -11,3 +11,5 @@ exports.move = tasks.move;
 
 exports.default = series(exports.clean, parallel(exports.pug2html, exports.styles, exports.watching, /*exports.move*/ /*exports.bs*/));
 // exports.default = testTask;
+
+// gulp --tasks
