@@ -1,6 +1,6 @@
 // Get name project
 import * as nodePath from 'path';
-const rootFolder = nodePath.basename(nodePath,resolve());
+const rootFolder = nodePath.basename(nodePath.resolve());
   
 const buildFolder = `./app/build`;
 const srcFolder = `./app/src/`;
@@ -11,7 +11,7 @@ export const path = {
     files: `${buildFolder}/files/`
   },
   src: {
-    files: `${srcfolder}/files/**/*.*`, 
+    files: `${srcFolder}/files/**/*.*`, 
   },
   watch: {},
   clean: buildFolder,
