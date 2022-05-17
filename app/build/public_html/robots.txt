@@ -2,3 +2,4 @@ User-agent: *
 Sitemap: https://howto.by/sitemap.xml
 Disallow: /test
 Disallow: /template
+Disallow: /template
