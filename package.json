@@ -21,5 +21,8 @@
     "gulp-w3c-html-validator": "^5.1.1",
     "require-dir": "^1.2.0",
     "w3c-html-validator": "^1.0.0"
+  },
+  "scripts": {
+    "dev": "gulp"
   }
 }
