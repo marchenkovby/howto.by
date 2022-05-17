@@ -1,4 +1,12 @@
 {
+  "name": "howto.by",
+  "description": "Knowledge base for configuring network hardware",
+  "author": "Maksim Marchenkov",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/marchenkovby/howto.by"
+  },
   "devDependencies": {
     "browser-sync": "^2.26.14",
     "del": "^6.0.0",
