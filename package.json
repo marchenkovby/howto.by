@@ -3,6 +3,8 @@
   "description": "Knowledge base for configuring network hardware",
   "author": "Maksim Marchenkov",
   "license": "ISC",
+  "main": "gulpfile.js",
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "https://github.com/marchenkovby/howto.by"
