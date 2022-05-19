@@ -33,6 +33,7 @@
     "w3c-html-validator": "^1.0.0"
   },
   "scripts": {
-    "dev": "gulp"
+    "gulp": "gulp",
+    "sass": "sass"
   }
 }
