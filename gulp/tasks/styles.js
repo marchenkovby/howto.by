@@ -4,6 +4,8 @@ import csscomb from 'gulp-csscomb';
 import rename from 'gulp-rename';
 import cleanCss from 'gulp-clean-css';
 import autoprefixer from 'gulp-autoprefixer';
+//import sassGlob from 'gulp-sass-glob';
+//import cssBeautify from 'gulp-cssbeautify';
 
 const sass = gulpSass(dartSass);
 
@@ -15,9 +17,11 @@ export const styles = () => {
       }))
     )
     //.pipe(app.plugins.replace(/@img\//g, '../images/'))
+    //.pipe(sassGlob())
     .pipe(sass({
       outputStyle: 'expanded'
     }))
+    //.pipe(cssBeautify())
     // .pipe(autoprefixer({
     //   grid: true,
     //   overrideBrowserslist: ['last 3 versions']
