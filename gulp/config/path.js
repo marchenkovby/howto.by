@@ -8,16 +8,19 @@ const srcFolder = `./app/src`;
 // export - for use variables in other files
 export const path = {
   build: {
+    js: `${buildFolder}/js/`,
     css: `${buildFolder}/public_html/styles/`,
     html: `${buildFolder}/content/`,
     files: `${buildFolder}/files/`
   },
   src: {
+    js: `${srcFolder}/js/app.js`,
     sass: `${srcFolder}/sass/style.sass`,
     html: `${srcFolder}/pug/*.pug`,
     files: `${srcFolder}/files/**/*.*` 
   },
   watch: {
+    js: `${srcFolder}/**/*.js`,
     sass: `${srcFolder}/**/*.sass`,
     html: `${srcFolder}/**/*.pug`,
     files: `${srcFolder}/files/**/*.*`, 
