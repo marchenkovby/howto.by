@@ -17,22 +17,22 @@ global.app = {
 // Import tasks
 import { copy } from "./gulp/tasks/copy.js";
 import { reset } from "./gulp/tasks/reset.js";
-import { html } from "./gulp/tasks/html.js";
+import { buildHtml } from "./gulp/tasks/buildHtml.js";
 import { server } from "./gulp/tasks/server.js";
-import { styles } from "./gulp/tasks/styles.js";
-import { js } from "./gulp/tasks/js.js";
-import { images } from "./gulp/tasks/images.js";
+import { buildStyles } from "./gulp/tasks/buildStyles.js";
+import { buildJs } from "./gulp/tasks/buildJs.js";
+import { compressImages } from "./gulp/tasks/compressImages.js";
  
 // Watcher for changes in files
 function watcher() {
   gulp.watch(path.watch.files, copy),
-  gulp.watch(path.watch.html, html),
-  gulp.watch(path.watch.sass, styles)
-  gulp.watch(path.watch.js, js),
-  gulp.watch(path.watch.images, images)
+  gulp.watch(path.watch.html, buildHtml),
+  gulp.watch(path.watch.sass, buildStyles)
+  gulp.watch(path.watch.js, buildJs),
+  gulp.watch(path.watch.images, compressImages)
 }
 
-const mainTasks = gulp.parallel(copy, html, styles, js);
+const mainTasks = gulp.parallel(copy, buildHtml, buildStyles, buildJs);
 const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));
 
 // Make default task

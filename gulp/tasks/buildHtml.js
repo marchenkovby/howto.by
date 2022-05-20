@@ -6,7 +6,7 @@ import rename from "gulp-rename";
 //import htmlReplace from "gulp-html-replace";
 import htmlRemoveEmptyLines from "gulp-remove-empty-lines";
 
-export const html = () => {
+export const buildHtml = () => {
   return app.gulp.src(app.path.src.html)
     .pipe(app.plugins.plumber(
       app.plugins.notify.onError({

@@ -9,7 +9,7 @@ import cssbeautify from 'gulp-cssbeautify';
 
 const sass = gulpSass(dartSass);
 
-export const styles = () => {
+export const buildStyles = () => {
   return app.gulp.src(app.path.src.sass, { sourcemaps: true })
     .pipe(app.plugins.plumber(
       app.plugins.notify.onError({

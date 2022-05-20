@@ -1,7 +1,7 @@
 import webp from "gulp-webp";
 import imagemin from "gulp-imagemin";
 
-export const images = () => {
+export const compressImages = () => {
     return app.gulp.src(app.path.src.images, { sourcemaps: true })
       .pipe(app.plugins.plumber(
         app.plugins.notify.onError({

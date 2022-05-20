@@ -5,34 +5,33 @@ const rootFolder = nodePath.basename(nodePath.resolve());
 const buildFolder = `./app/build`;
 const srcFolder = `./app/src`;
 
-// TODO: Reverse order variables
 // export - for use variables in other files
 export const path = {
   build: {
-    images: `${buildFolder}/images/`,
-    js: `${buildFolder}/js/`,
-    css: `${buildFolder}/public_html/styles/`,
+    files: `${buildFolder}/files/`,
     html: `${buildFolder}/content/`,
-    files: `${buildFolder}/files/`
+    css: `${buildFolder}/public_html/styles/`,
+    js: `${buildFolder}/js/`,
+    images: `${buildFolder}/images/`
   },
   src: {
-    svg: `${srcFolder}/images/**/*.{svg}`,
-    images: `${srcFolder}/images/**/*.{jpg,jpeg,png,gif,wepb}`,
-    js: `${srcFolder}/js/app.js`,
-    sass: `${srcFolder}/sass/style.sass`,
+    files: `${srcFolder}/files/**/*.*`,
     html: `${srcFolder}/pug/*.pug`,
-    files: `${srcFolder}/files/**/*.*` 
+    sass: `${srcFolder}/sass/style.sass`,
+    js: `${srcFolder}/js/app.js`,
+    images: `${srcFolder}/images/**/*.{jpg,jpeg,png,gif,wepb}`,
+    svg: `${srcFolder}/images/**/*.{svg}`
   },
   watch: {
-    images: `${srcFolder}/images/**/*.{jpg,jpeg,png,svg,gif,ico,wepb}`,
-    js: `${srcFolder}/**/*.js`,
-    sass: `${srcFolder}/**/*.sass`,
+    files: `${srcFolder}/files/**/*.*`,
     html: `${srcFolder}/**/*.pug`,
-    files: `${srcFolder}/files/**/*.*` 
+    sass: `${srcFolder}/**/*.sass`,
+    js: `${srcFolder}/**/*.js`,
+    images: `${srcFolder}/images/**/*.{jpg,jpeg,png,svg,gif,ico,wepb}`
   },
   clean: {
-    css: `${buildFolder}/public_html/styles/`,
-    html: `${buildFolder}/content/`
+    html: `${buildFolder}/content/`,
+    css: `${buildFolder}/public_html/styles/`
   },
   buildFolder: buildFolder,
   srcFolder: srcFolder,
