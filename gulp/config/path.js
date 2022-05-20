@@ -8,30 +8,31 @@ const srcFolder = `./app/src`;
 // export - for use variables in other files
 export const path = {
   build: {
-    files: `${buildFolder}/files/`,
-    html: `${buildFolder}/content/`,
-    css: `${buildFolder}/public_html/styles/`,
+    fonts: `${buildFolder}/fonts/`,
+    images: `${buildFolder}/images/`,
     js: `${buildFolder}/js/`,
-    images: `${buildFolder}/images/`
+    css: `${buildFolder}/public_html/styles/`,
+    html: `${buildFolder}/content/`,
+    files: `${buildFolder}/files/`
   },
   src: {
-    files: `${srcFolder}/files/**/*.*`,
-    html: `${srcFolder}/pug/*.pug`,
-    sass: `${srcFolder}/sass/style.sass`,
-    js: `${srcFolder}/js/app.js`,
+    svg: `${srcFolder}/images/**/*.{svg}`,
     images: `${srcFolder}/images/**/*.{jpg,jpeg,png,gif,wepb}`,
-    svg: `${srcFolder}/images/**/*.{svg}`
+    js: `${srcFolder}/js/app.js`,
+    sass: `${srcFolder}/sass/style.sass`,
+    html: `${srcFolder}/pug/*.pug`,
+    files: `${srcFolder}/files/**/*.*`
   },
   watch: {
-    files: `${srcFolder}/files/**/*.*`,
-    html: `${srcFolder}/**/*.pug`,
-    sass: `${srcFolder}/**/*.sass`,
+    images: `${srcFolder}/images/**/*.{jpg,jpeg,png,svg,gif,ico,wepb}`,
     js: `${srcFolder}/**/*.js`,
-    images: `${srcFolder}/images/**/*.{jpg,jpeg,png,svg,gif,ico,wepb}`
+    sass: `${srcFolder}/**/*.sass`,
+    html: `${srcFolder}/**/*.pug`,
+    files: `${srcFolder}/files/**/*.*`
   },
   clean: {
-    html: `${buildFolder}/content/`,
-    css: `${buildFolder}/public_html/styles/`
+    css: `${buildFolder}/public_html/styles/`,
+    html: `${buildFolder}/content/`
   },
   buildFolder: buildFolder,
   srcFolder: srcFolder,

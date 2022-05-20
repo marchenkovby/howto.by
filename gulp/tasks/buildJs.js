@@ -1,5 +1,5 @@
 // npm i -D wepbpack webpack-stream
-import webpack from "webpack-stream";
+import webpack from 'webpack-stream';
 
 export const buildJs = () => {
     return app.gulp.src(app.path.src.js, { sourcemaps: true })

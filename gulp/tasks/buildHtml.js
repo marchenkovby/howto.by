@@ -1,10 +1,10 @@
-//import fileInclude from "gulp-file-include";
-//import webpHtmlNosvg from "gulp-webp-html-nosvg";
-import versionNumber from "gulp-version-number";
-import pug from "gulp-pug";
-import rename from "gulp-rename";
-//import htmlReplace from "gulp-html-replace";
-import htmlRemoveEmptyLines from "gulp-remove-empty-lines";
+//import fileInclude from 'gulp-file-include';
+//import webpHtmlNosvg from 'gulp-webp-html-nosvg';
+import versionNumber from 'gulp-version-number';
+import pug from 'gulp-pug';
+import rename from 'gulp-rename';
+//import htmlReplace from 'gulp-html-replace';
+import htmlRemoveEmptyLines from 'gulp-remove-empty-lines';
 
 export const buildHtml = () => {
   return app.gulp.src(app.path.src.html)
