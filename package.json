@@ -42,6 +42,8 @@
     "html-validate": "^7.1.0",
     "require-dir": "^1.2.0",
     "sass": "^1.51.0",
+    "util": "^0.12.4",
+    "vinyl-ftp": "^0.6.1",
     "w3c-html-validator": "^1.0.0",
     "webpack": "^5.72.1",
     "webpack-stream": "^7.0.0"
@@ -50,6 +52,7 @@
     "dev": "gulp",
     "build": "gulp build --build",
     "zip": "gulp zip",
+    "deploy": "gulp deploy",
     "test:html": "html-validate \"app/build/content/*.html"
   }
 }

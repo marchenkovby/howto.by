@@ -25,6 +25,7 @@ import { buildStyles } from './gulp/tasks/buildStyles.js';
 import { buildJs } from './gulp/tasks/buildJs.js';
 import { compressImages } from './gulp/tasks/compressImages.js';
 import { zip } from './gulp/tasks/zip.js';
+import { deploy } from './gulp/tasks/deploy.js';
 
 // Watcher for changes in files
 function watcher() {
@@ -49,3 +50,4 @@ export { compressImages }
 export { dev }
 export { build }
 export { zip }
+export { deploy }
