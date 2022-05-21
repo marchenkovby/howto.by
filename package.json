@@ -52,7 +52,10 @@
     "dev": "gulp",
     "build": "gulp build --build",
     "zip": "gulp zip",
-    "deploy": "gulp deploy",
+    "deploy": "node deploy",
     "test:html": "html-validate \"app/build/content/*.html"
+  },
+  "dependencies": {
+    "ftp-deploy": "^2.4.2"
   }
 }
