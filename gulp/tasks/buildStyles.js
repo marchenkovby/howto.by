@@ -10,7 +10,7 @@ import cssbeautify from 'gulp-cssbeautify';
 const sass = gulpSass(dartSass);
 
 export const buildStyles = () => {
-  return app.gulp.src(app.path.src.sass, { sourcemaps: true })
+  return app.gulp.src(app.path.src.sass, { sourcemaps: app.isDev })
     .pipe(app.plugins.plumber(
       app.plugins.notify.onError({
         title: "SASS"

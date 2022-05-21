@@ -1,13 +1,17 @@
 {
   "name": "howto.by",
   "description": "Knowledge base for configuring network hardware",
-  "author": "Maksim Marchenkov",
-  "license": "ISC",
+  "version": "1.0.1",
+  "author": {
+    "name": "Maksim Marchenkov",
+    "url": "https://marchenkov.by"
+  },
+  "license": "MIT",
   "main": "gulpfile.js",
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "https://github.com/marchenkovby/howto.by"
+    "url": "https://github.com/marchenkovby/howto.by.git"
   },
   "devDependencies": {
     "browser-sync": "^2.26.14",
@@ -19,6 +23,9 @@
     "gulp-csscomb": "^3.1.0",
     "gulp-file-include": "^2.3.0",
     "gulp-html-replace": "^1.6.2",
+    "gulp-if": "^3.0.0",
+    "gulp-imagemin": "^8.0.0",
+    "gulp-newer": "^1.4.0",
     "gulp-notify": "^4.0.0",
     "gulp-plumber": "^1.2.1",
     "gulp-pug": "^4.0.1",
@@ -29,15 +36,20 @@
     "gulp-sass-glob": "^1.1.0",
     "gulp-version-number": "^0.2.4",
     "gulp-w3c-html-validator": "^5.1.1",
+    "gulp-webp": "^4.0.1",
     "gulp-webp-html-nosvg": "^1.0.9",
+    "gulp-zip": "^5.1.0",
     "html-validate": "^7.1.0",
     "require-dir": "^1.2.0",
     "sass": "^1.51.0",
-    "w3c-html-validator": "^1.0.0"
+    "w3c-html-validator": "^1.0.0",
+    "webpack": "^5.72.1",
+    "webpack-stream": "^7.0.0"
   },
   "scripts": {
-    "gulp": "gulp",
-    "sass": "sass",
+    "dev": "gulp",
+    "build": "gulp build --build",
+    "zip": "gulp zip",
     "test:html": "html-validate \"app/build/content/*.html"
   }
 }

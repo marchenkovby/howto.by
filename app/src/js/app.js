@@ -3,11 +3,11 @@
 // Import all (*) functions from file function.js
 import * as flsFunctions from "./modules/functions.js";
 
-flsFunctions.isWEbp(); // <html class="webp">
+flsFunctions.isWebp(); // <html class="webp">
 
 // npm i -D swiper
 
-import Swiper, { Navigation, Pagination } from 'swiper';
+//import Swiper, { Navigation, Pagination } from 'swiper';
 
-const swiper = new Swiper();
+//const swiper = new Swiper();
 

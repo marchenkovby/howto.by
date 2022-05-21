@@ -8,16 +8,16 @@ export const compressImages = () => {
           title: "IMAGES"
         }))
       )
-      .pipe(app.plugins.newer(app.path.build.images))
+      //.pipe(app.plugins.newer(app.path.build.images))
       
       // For images webp
       // Create image webp
-      .pipe(webp())
-      .pipe(app.gulp.dest(app.path.build.images))
+      //.pipe(webp())
+      //.pipe(app.gulp.dest(app.path.build.images))
       
       // For other images: jpg, jpeg, png, gif and e.t.c.
-      .pipe(app.gulp.src(app.path.src.images))
-      .pipe(app.plugins.newer(app.path.build.images))
+      //.pipe(app.gulp.src(app.path.src.images))
+      //.pipe(app.plugins.newer(app.path.build.images))
       .pipe(imagemin({
         progressive: true,
         svgoPlugins: [{ removeViewBox: false }],

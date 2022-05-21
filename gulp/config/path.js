@@ -8,8 +8,7 @@ const srcFolder = `./app/src`;
 // export - for use variables in other files
 export const path = {
   build: {
-    fonts: `${buildFolder}/fonts/`,
-    images: `${buildFolder}/images/`,
+    images: `${buildFolder}/public_html/images/`,
     js: `${buildFolder}/js/`,
     css: `${buildFolder}/public_html/styles/`,
     html: `${buildFolder}/content/`,

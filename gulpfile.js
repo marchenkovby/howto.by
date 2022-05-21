@@ -9,6 +9,8 @@ import { plugins } from './gulp/config/plugins.js';
 
 // Pass value to global variables
 global.app = {
+  isBuild: process.argv.includes('--build'),
+  isDev: !process.argv.includes('--build'),
   path: path,
   gulp: gulp,
   plugins: plugins
@@ -22,7 +24,7 @@ import { server } from './gulp/tasks/server.js';
 import { buildStyles } from './gulp/tasks/buildStyles.js';
 import { buildJs } from './gulp/tasks/buildJs.js';
 import { compressImages } from './gulp/tasks/compressImages.js';
-//import { convertFonts } from './gulp/tasks/convertFonts.js';
+import { zip } from './gulp/tasks/zip.js';
 
 // Watcher for changes in files
 function watcher() {
@@ -33,8 +35,17 @@ function watcher() {
   gulp.watch(path.watch.images, compressImages)
 }
 
-const mainTasks = gulp.parallel(copy, buildHtml, buildStyles, buildJs);
+const mainTasks = gulp.parallel(copy, buildHtml, buildStyles, buildJs, compressImages);
 const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));
+const build = gulp.series(reset, mainTasks);
+//const zip = gulp.series(/*reset, mainTasks, */zip)
 
 // Make default task
 gulp.task('default', dev);
+
+// Single task 
+// Example: gulp CompressImages
+export { compressImages }
+export { dev }
+export { build }
+export { zip }
