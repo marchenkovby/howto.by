@@ -2,8 +2,8 @@
 import * as nodePath from 'path';
 const rootFolder = nodePath.basename(nodePath.resolve());
   
-const buildFolder = `.. `;
-const srcFolder = `src`;
+const buildFolder = `../`;
+const srcFolder = `./src`;
 
 // export - for use variables in other files
 export const path = {
@@ -18,7 +18,7 @@ export const path = {
     svg: `${srcFolder}/images/**/*.{svg}`,
     images: `${srcFolder}/images/**/*.{jpg,jpeg,png,gif,wepb}`,
     scripts: `${srcFolder}/scripts/app.js`,
-    styles: `${srcFolder}/sass/style.sass`,
+    styles: `${srcFolder}/styles/style.sass`,
     html: `${srcFolder}/pug/*.pug`,
     files: `${srcFolder}/files/**/*.*`
   },
