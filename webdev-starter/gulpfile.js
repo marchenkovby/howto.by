@@ -31,8 +31,8 @@ import { zip } from './gulp/tasks/zip.js';
 function watcher() {
   gulp.watch(path.watch.files, copy),
   gulp.watch(path.watch.html, buildHtml),
-  gulp.watch(path.watch.sass, buildStyles)
-  gulp.watch(path.watch.js, buildJs),
+  gulp.watch(path.watch.styles, buildStyles)
+  gulp.watch(path.watch.scripts, buildJs),
   gulp.watch(path.watch.images, compressImages)
 }
 
