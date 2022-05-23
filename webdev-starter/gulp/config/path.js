@@ -2,35 +2,35 @@
 import * as nodePath from 'path';
 const rootFolder = nodePath.basename(nodePath.resolve());
   
-const buildFolder = `./app/build`;
-const srcFolder = `./app/src`;
+const buildFolder = `.. `;
+const srcFolder = `src`;
 
 // export - for use variables in other files
 export const path = {
   build: {
     images: `${buildFolder}/public_html/images/`,
-    js: `${buildFolder}/js/`,
-    css: `${buildFolder}/public_html/styles/`,
+    scripts: `${buildFolder}/public_html/scripts/`,
+    styles: `${buildFolder}/public_html/styles/`,
     html: `${buildFolder}/content/`,
     files: `${buildFolder}/files/`
   },
   src: {
     svg: `${srcFolder}/images/**/*.{svg}`,
     images: `${srcFolder}/images/**/*.{jpg,jpeg,png,gif,wepb}`,
-    js: `${srcFolder}/js/app.js`,
-    sass: `${srcFolder}/sass/style.sass`,
+    scripts: `${srcFolder}/scripts/app.js`,
+    styles: `${srcFolder}/sass/style.sass`,
     html: `${srcFolder}/pug/*.pug`,
     files: `${srcFolder}/files/**/*.*`
   },
   watch: {
     images: `${srcFolder}/images/**/*.{jpg,jpeg,png,svg,gif,ico,wepb}`,
-    js: `${srcFolder}/**/*.js`,
-    sass: `${srcFolder}/**/*.sass`,
+    scripts: `${srcFolder}/**/*.js`,
+    styles: `${srcFolder}/**/*.sass`,
     html: `${srcFolder}/**/*.pug`,
     files: `${srcFolder}/files/**/*.*`
   },
   clean: {
-    css: `${buildFolder}/public_html/styles/`,
+    styles: `${buildFolder}/public_html/styles/`,
     html: `${buildFolder}/content/`
   },
   buildFolder: buildFolder,

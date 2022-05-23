@@ -10,7 +10,7 @@ import cssbeautify from 'gulp-cssbeautify';
 const sass = gulpSass(dartSass);
 
 export const buildStyles = () => {
-  return app.gulp.src(app.path.src.sass, { sourcemaps: app.isDev })
+  return app.gulp.src(app.path.src.styles, { sourcemaps: app.isDev })
     .pipe(app.plugins.plumber(
       app.plugins.notify.onError({
         title: "SASS"
@@ -26,11 +26,11 @@ export const buildStyles = () => {
     }))
     .pipe(csscomb())
     .pipe(app.plugins.replace(/@charset "UTF-8";\n\n/, ''))
-    .pipe(app.gulp.dest(app.path.build.css))
+    .pipe(app.gulp.dest(app.path.build.styles))
     .pipe(rename({
       extname: '.min.css'
     }))
     .pipe(cleanCss())
-    .pipe(app.gulp.dest(app.path.build.css))
+    .pipe(app.gulp.dest(app.path.build.styles))
     .pipe(app.plugins.browsersync.stream())
 }
