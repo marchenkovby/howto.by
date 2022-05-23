@@ -35,27 +35,23 @@
     "gulp-sass": "^5.1.0",
     "gulp-sass-glob": "^1.1.0",
     "gulp-version-number": "^0.2.4",
-    "gulp-w3c-html-validator": "^5.1.1",
     "gulp-webp": "^4.0.1",
     "gulp-webp-html-nosvg": "^1.0.9",
     "gulp-zip": "^5.1.0",
-    "html-validate": "^7.1.0",
     "require-dir": "^1.2.0",
     "sass": "^1.51.0",
     "util": "^0.12.4",
-    "vinyl-ftp": "^0.6.1",
-    "w3c-html-validator": "^1.0.0",
-    "webpack": "^5.72.1",
-    "webpack-stream": "^7.0.0"
+    "vinyl-ftp": "^0.6.1"
   },
   "scripts": {
     "dev": "gulp",
     "build": "gulp build --build",
-    "zip": "gulp zip",
-    "deploy": "node deploy",
+    "build-html": "gulp buildHtml",
+    "build-styles": "gulp buildStyles",
+    "build-js": "gulp buildJs",
+    "compress-images": "gulp compressImages",
+    "server": "gulp server",
+    "reset": " gulp reset",
     "test:html": "html-validate \"app/build/content/*.html"
-  },
-  "dependencies": {
-    "ftp-deploy": "^2.4.2"
   }
 }

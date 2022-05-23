@@ -24,7 +24,7 @@ import { server } from './gulp/tasks/server.js';
 import { buildStyles } from './gulp/tasks/buildStyles.js';
 import { buildJs } from './gulp/tasks/buildJs.js';
 import { compressImages } from './gulp/tasks/compressImages.js';
-import { zip } from './gulp/tasks/zip.js';
+//import { zip } from './gulp/tasks/zip.js';
 //import { deploy } from 'gulp/tasks/deploy.js';
 
 // Watcher for changes in files
@@ -32,22 +32,25 @@ function watcher() {
   gulp.watch(path.watch.files, copy),
   gulp.watch(path.watch.html, buildHtml),
   gulp.watch(path.watch.styles, buildStyles)
-  gulp.watch(path.watch.scripts, buildJs),
+  gulp.watch(path.watch.scripts, buildJs)
   gulp.watch(path.watch.images, compressImages)
 }
 
 const mainTasks = gulp.parallel(copy, buildHtml, buildStyles, buildJs, compressImages);
 const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));
 const build = gulp.series(reset, mainTasks);
-//const zip = gulp.series(/*reset, mainTasks, */zip)
+//const zip = gulp.series(reset, mainTasks, zip)
 
 // Make default task
 gulp.task('default', dev);
 
 // Single task 
 // Example: gulp CompressImages
-export { compressImages }
 export { dev }
 export { build }
-export { zip }
-//export { deploy }
+export { reset }
+export { buildHtml }
+export { buildStyles }
+export { buildJs }
+export { compressImages }
+export { server }

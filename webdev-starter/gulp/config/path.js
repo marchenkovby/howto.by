@@ -2,7 +2,7 @@
 import * as nodePath from 'path';
 const rootFolder = nodePath.basename(nodePath.resolve());
   
-const buildFolder = `../`;
+const buildFolder = `..`;
 const srcFolder = `./src`;
 
 // export - for use variables in other files
@@ -30,6 +30,7 @@ export const path = {
     files: `${srcFolder}/files/**/*.*`
   },
   clean: {
+    scripts: `${buildFolder}/public_html/scripts/app.js`,
     styles: `${buildFolder}/public_html/styles/`,
     html: `${buildFolder}/content/`
   },
