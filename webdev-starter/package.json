@@ -21,7 +21,6 @@
     "gulp-clean-css": "^4.3.0",
     "gulp-cssbeautify": "^3.0.1",
     "gulp-csscomb": "^3.1.0",
-    "gulp-file-include": "^2.3.0",
     "gulp-html-replace": "^1.6.2",
     "gulp-if": "^3.0.0",
     "gulp-imagemin": "^8.0.0",
@@ -35,13 +34,7 @@
     "gulp-sass": "^5.1.0",
     "gulp-sass-glob": "^1.1.0",
     "gulp-version-number": "^0.2.4",
-    "gulp-webp": "^4.0.1",
-    "gulp-webp-html-nosvg": "^1.0.9",
-    "gulp-zip": "^5.1.0",
-    "require-dir": "^1.2.0",
-    "sass": "^1.51.0",
-    "util": "^0.12.4",
-    "vinyl-ftp": "^0.6.1"
+    "sass": "^1.51.0"
   },
   "scripts": {
     "dev": "gulp",
@@ -52,7 +45,6 @@
     "dev-styles": "gulp buildStyles",   
     "compress-images": "gulp compressImages",
     "server": "gulp server",
-    "reset": " gulp reset",
-    "test:html": "html-validate \"app/build/content/*.html"
+    "reset": " gulp reset"
   }
 }

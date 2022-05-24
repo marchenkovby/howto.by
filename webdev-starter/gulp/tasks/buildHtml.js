@@ -2,7 +2,7 @@ import versionNumber from 'gulp-version-number';
 import pug from 'gulp-pug';
 import rename from 'gulp-rename';
 import htmlReplace from 'gulp-html-replace';
-import htmlRemoveEmptyLines from 'gulp-remove-empty-lines';
+import removeEmptyLines from 'gulp-remove-empty-lines';
 
 export const buildHtml = () => {
   return app.gulp.src(app.path.src.html)
@@ -29,7 +29,7 @@ export const buildHtml = () => {
     })))
     /*
     .pipe(htmlReplace({remove : ''}))
-    .pipe(htmlRemoveEmptyLines())
+    .pipe(removeEmptyLines())
     .pipe(rename({
       extname: '.php'
     }))

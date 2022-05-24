@@ -10,20 +10,17 @@ export const path = {
   build: {
     images: `${buildFolder}/public_html/images/`,
     styles: `${buildFolder}/public_html/styles/`,
-    html: `${buildFolder}/content/`,
-    files: `${buildFolder}/files/`
+    html: `${buildFolder}/content/`
   },
   src: {
     images: `${srcFolder}/images/**/*.{jpg,jpeg,png,gif,wepb}`,
     styles: `${srcFolder}/styles/style.sass`,
-    html: `${srcFolder}/pug/*.pug`,
-    files: `${srcFolder}/files/**/*.*`
+    html: `${srcFolder}/pug/*.pug`
   },
   watch: {
     images: `${srcFolder}/images/**/*.{jpg,jpeg,png,svg,gif,ico,wepb}`,
     styles: `${srcFolder}/**/*.sass`,
-    html: `${srcFolder}/**/*.pug`,
-    files: `${srcFolder}/files/**/*.*`
+    html: `${srcFolder}/**/*.pug`
   },
   clean: {
     styles: `${buildFolder}/public_html/styles/`,
@@ -31,6 +28,5 @@ export const path = {
   },
   buildFolder: buildFolder,
   srcFolder: srcFolder,
-  rootFolder: rootFolder,
-  ftp: ``
+  rootFolder: rootFolder
 }
