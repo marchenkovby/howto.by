@@ -18,19 +18,21 @@ global.app = {
 
 // Import tasks
 import { reset } from './gulp/tasks/reset.js';
-import { buildHtml } from './gulp/tasks/buildHtml.js';
+import { buildContent } from './gulp/tasks/buildContent.js';
+import { buildPages } from './gulp/tasks/buildPages.js';
 import { server } from './gulp/tasks/server.js';
 import { buildStyles } from './gulp/tasks/buildStyles.js';
 import { compressImages } from './gulp/tasks/compressImages.js';
 
 // Watcher for changes in files
 function watcher() {
-  gulp.watch(path.watch.html, buildHtml),
+  gulp.watch(path.watch.content, buildContent),
+  gulp.watch(path.watch.pages, buildPages),    
   gulp.watch(path.watch.styles, buildStyles)
   gulp.watch(path.watch.images, compressImages)
 }
 
-const mainTasks = gulp.parallel(buildHtml, buildStyles);
+const mainTasks = gulp.parallel(buildContent, buildPages, buildStyles);
 const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));
 const build = gulp.series(reset, mainTasks);
 
@@ -41,7 +43,8 @@ gulp.task('default', dev);
 // Example: gulp CompressImages
 export { dev }
 export { build }
-export { buildHtml }
+export { buildContent }
+export { buildPages }
 export { buildStyles }
 export { compressImages }
 export { server }

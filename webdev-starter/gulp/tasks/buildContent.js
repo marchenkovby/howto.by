@@ -4,8 +4,8 @@ import rename from 'gulp-rename';
 import htmlReplace from 'gulp-html-replace';
 import removeEmptyLines from 'gulp-remove-empty-lines';
 
-export const buildHtml = () => {
-  return app.gulp.src(app.path.src.html)
+export const buildContent = () => {
+  return app.gulp.src(app.path.src.content)
     .pipe(app.plugins.plumber(
       app.plugins.notify.onError({
         title: "HTML",
@@ -27,13 +27,11 @@ export const buildHtml = () => {
         ]
       }
     })))
-    /*
     .pipe(htmlReplace({remove : ''}))
     .pipe(removeEmptyLines())
     .pipe(rename({
       extname: '.php'
     }))
-    */
-    .pipe(app.gulp.dest(app.path.build.html))
+    .pipe(app.gulp.dest(app.path.build.content))
     .pipe(app.plugins.browsersync.stream())
 }

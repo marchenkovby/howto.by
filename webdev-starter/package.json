@@ -38,13 +38,8 @@
   },
   "scripts": {
     "dev": "gulp",
-    "build": "gulp build --build",
-    "build-html": "gulp buildHtml --build",
-    "dev-html": "gulp buildHtml",
-    "build-styles": "gulp buildStyles --build",
-    "dev-styles": "gulp buildStyles",   
+    "build": "gulp build --build",   
     "compress-images": "gulp compressImages",
-    "server": "gulp server",
-    "reset": " gulp reset"
+    "reset": "gulp reset"
   }
 }

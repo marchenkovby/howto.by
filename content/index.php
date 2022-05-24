@@ -1,26 +1,3 @@
-
-<!-- build:remove--><!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>База знаний по настройке сетевого оборудования</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/styles/style.css">
-  </head>
-  <body>
-    <div class="page">
-      <div class="page__inner">
-        <header class="main-header page__main-header">
-          <div class="logo"><a class="logo__link logo__link--development" href="/">howto.by</a></div>
-        </header>
-        <nav class="breadcrumbs page__breadcrumbs">
-          <ul class="breadcrumbs__list">
-            <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="/">Главная</a></li>
-            <li class="breadcrumbs__item">База знаний по настройке сетевого оборудования</li>
-          </ul>
-        </nav>
-        <main class="main-content page__main-content"> 
-          <!-- endbuild-->
           <p class="main-content__intro">Сайт содержит статьи, руководства и FAQ по настройке модемов, роутеров, приставок и другого сетевого оборудования для провайдера Белтелеком.</p>
           <article class="article main-content__article">
             <h1 class="article__heading article__heading--level-1">Список статей, руководств и FAQ</h1>
@@ -159,19 +136,7 @@
               </ul>
             </section>
           </article>
-          <!-- build:remove-->
-          <div class="comments main-content__comments">
-            <p class="comments__paragraph">У вас есть вопрос? Заметили ошибку? Пишите в телеграм <a class="comments__link" href="https://t.me/howtoby" target="_blank">t.me/howtoby</a>.</p>
-          </div>
-        </main>
-        <footer class="main-footer page__main-footer">
-          <p class="main-footer__paragraph">(c) <a class="main-footer__link" href="https://marchenkov.by" target="_blank">Максим Марченков</a> 2019-2021</p>
-        </footer>
-      </div>
-    </div>
-  </body>
-</html>
-<!-- endbuild--><?php
+<?php
 return [
  'title' => 'База знаний по настройке сетевого оборудования',
  'desk'  => 'Статьи, руководства и FAQ по настройке модемов, роутеров, приставок и другого сетевого оборудования для провайдера Белтелеком.',

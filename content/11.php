@@ -1,26 +1,3 @@
-
-<!-- build:remove--><!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title><?php isset($title) and print($title) ?></title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/styles/style.css">
-  </head>
-  <body>
-    <div class="page">
-      <div class="page__inner">
-        <header class="main-header page__main-header">
-          <div class="logo"><a class="logo__link logo__link--development" href="/">howto.by</a></div>
-        </header>
-        <nav class="breadcrumbs page__breadcrumbs">
-          <ul class="breadcrumbs__list">
-            <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="/">Главная</a></li>
-            <li class="breadcrumbs__item">Как настроить охрану на GPON-модеме Huawei EchoLife HG8245HV5</li>
-          </ul>
-        </nav>
-        <main class="main-content page__main-content"> 
-          <!-- endbuild-->
           <article class="article main-content__article">
             <header class="article__header">
               <h1 class="article__heading article__heading--level-1">Как настроить охрану на GPON-модеме Huawei EchoLife HG8245HV5</h1>
@@ -78,19 +55,7 @@
               </ol>
             </div>
           </article>
-          <!-- build:remove-->
-          <div class="comments main-content__comments">
-            <p class="comments__paragraph">У вас есть вопрос? Заметили ошибку? Пишите в телеграм <a class="comments__link" href="https://t.me/howtoby" target="_blank">t.me/howtoby</a>.</p>
-          </div>
-        </main>
-        <footer class="main-footer page__main-footer">
-          <p class="main-footer__paragraph">(c) <a class="main-footer__link" href="https://marchenkov.by" target="_blank">Максим Марченков</a> 2019-2021</p>
-        </footer>
-      </div>
-    </div>
-  </body>
-</html>
-<!-- endbuild--><?php
+<?php
 return [
  'title' => 'Как настроить охрану на GPON-модеме Huawei EchoLife HG8245HV5',
  'desk'  => 'В статье я вам расскажу о том, как настроить охрану на GPON-модеме Huawei EchoLife HG8245HV5',

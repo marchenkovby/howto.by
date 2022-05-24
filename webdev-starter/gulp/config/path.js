@@ -10,21 +10,25 @@ export const path = {
   build: {
     images: `${buildFolder}/public_html/images/`,
     styles: `${buildFolder}/public_html/styles/`,
-    html: `${buildFolder}/content/`
+    content: `${buildFolder}/content/`,
+    pages: `${buildFolder}/public_html/pages`
   },
   src: {
     images: `${srcFolder}/images/**/*.{jpg,jpeg,png,gif,wepb}`,
     styles: `${srcFolder}/styles/style.sass`,
-    html: `${srcFolder}/pug/*.pug`
+    content: `${srcFolder}/content/*.pug`,
+    pages: `${srcFolder}/pages/*.pug` 
   },
   watch: {
     images: `${srcFolder}/images/**/*.{jpg,jpeg,png,svg,gif,ico,wepb}`,
     styles: `${srcFolder}/**/*.sass`,
-    html: `${srcFolder}/**/*.pug`
+    content: `${srcFolder}/content/**/*.pug`,
+    pages: `${srcFolder}/pages/**/*.pug`,
   },
   clean: {
     styles: `${buildFolder}/public_html/styles/`,
-    html: `${buildFolder}/content/`
+    content: `${buildFolder}/content/`,
+    pages: `${buildFolder}/public_html/pages/`,
   },
   buildFolder: buildFolder,
   srcFolder: srcFolder,
