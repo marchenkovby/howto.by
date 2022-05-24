@@ -16,21 +16,20 @@ export const buildStyles = () => {
         title: "SASS"
       }))
     )
-    //.pipe(app.plugins.replace(/@img\//g, '../images/'))
     .pipe(sassGlob())
     .pipe(sass())
     .pipe(cssbeautify())
-    .pipe(autoprefixer({
+    .pipe(app.plugins.if(app.isBuild, autoprefixer({
       grid: true,
       overrideBrowserslist: ['last 3 versions']
-    }))
+    })))
     .pipe(csscomb())
     .pipe(app.plugins.replace(/@charset "UTF-8";\n\n/, ''))
-    .pipe(app.gulp.dest(app.path.build.styles))
-    .pipe(rename({
+    .pipe(app.plugins.if(app.isDev, app.gulp.dest(app.path.build.styles)))
+    .pipe(app.plugins.if(app.isBuild, rename({
       extname: '.min.css'
-    }))
-    .pipe(cleanCss())
-    .pipe(app.gulp.dest(app.path.build.styles))
+    })))
+    .pipe(app.plugins.if(app.isBuild, cleanCss()))
+    .pipe(app.plugins.if(app.isBuild, app.gulp.dest(app.path.build.styles)))
     .pipe(app.plugins.browsersync.stream())
 }

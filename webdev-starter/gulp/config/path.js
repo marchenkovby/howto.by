@@ -9,28 +9,23 @@ const srcFolder = `./src`;
 export const path = {
   build: {
     images: `${buildFolder}/public_html/images/`,
-    scripts: `${buildFolder}/public_html/scripts/`,
     styles: `${buildFolder}/public_html/styles/`,
     html: `${buildFolder}/content/`,
     files: `${buildFolder}/files/`
   },
   src: {
-    svg: `${srcFolder}/images/**/*.{svg}`,
     images: `${srcFolder}/images/**/*.{jpg,jpeg,png,gif,wepb}`,
-    scripts: `${srcFolder}/scripts/app.js`,
     styles: `${srcFolder}/styles/style.sass`,
     html: `${srcFolder}/pug/*.pug`,
     files: `${srcFolder}/files/**/*.*`
   },
   watch: {
     images: `${srcFolder}/images/**/*.{jpg,jpeg,png,svg,gif,ico,wepb}`,
-    scripts: `${srcFolder}/**/*.js`,
     styles: `${srcFolder}/**/*.sass`,
     html: `${srcFolder}/**/*.pug`,
     files: `${srcFolder}/files/**/*.*`
   },
   clean: {
-    scripts: `${buildFolder}/public_html/scripts/app.js`,
     styles: `${buildFolder}/public_html/styles/`,
     html: `${buildFolder}/content/`
   },

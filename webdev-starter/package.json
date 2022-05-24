@@ -46,9 +46,10 @@
   "scripts": {
     "dev": "gulp",
     "build": "gulp build --build",
-    "build-html": "gulp buildHtml",
-    "build-styles": "gulp buildStyles",
-    "build-js": "gulp buildJs",
+    "build-html": "gulp buildHtml --build",
+    "dev-html": "gulp buildHtml",
+    "build-styles": "gulp buildStyles --build",
+    "dev-styles": "gulp buildStyles",   
     "compress-images": "gulp compressImages",
     "server": "gulp server",
     "reset": " gulp reset",
