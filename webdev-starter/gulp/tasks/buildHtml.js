@@ -23,25 +23,17 @@ export const buildHtml = () => {
     // Call global plugin replace
     .pipe(app.plugins.replace(/@img\//g, 'images/'))
     //.pipe(webpHtmlNosvg())
-    .pipe(
-      app.plugins.if(
-        app.isDev,
-          versionNumber({
-            'value': '%DT%',
-            'append': {
-              'key': 'v',
-              'cover': 0,
-              'to': [
-                'css',
-                'js',
-              ]
-          }//,
-            //'output': {
-            //  'file': 'gulp/version.json'
-            //}
-        })
-      )
-    )
+    .pipe(app.plugins.if(app.isDev, versionNumber({
+      'value': '%DT%',
+      'append': {
+        'key': 'v',
+        'cover': 0,
+        'to': [
+          'css',
+          'js',
+        ]
+      }
+    })))
     //.pipe(htmlReplace({remove : ''}))
     //.pipe(htmlRemoveEmptyLines())
     //.pipe(rename({
